@@ -1,0 +1,253 @@
+Array
+(
+    [0] => Array
+        (
+            [id] => 12
+            [merk] => -
+            [namabar] => MATA BOR KAYU SET NANKAI #HSG7
+            [tipe_bar] => 
+            [kategori] => MATA BOR
+            [harga_beli] => 50000
+            [harga_beli_bayangan] => 
+            [harga_jual] => 75000
+            [jum_stok] => 5.0
+            [satuan] => PCS
+            [lmt_min] => 12
+            [ket] => 
+            [st_per_harga] => 0
+            [harga_beli_sebelum] => 51000
+            [jns_kepemilikan] => 1
+            [hrgjualbawah] => 51000
+            [hrgjualatas] => 100000
+            [id_sup] => 14
+            [nama_sup] => NAGA MAS
+            [f3] => 
+            [f4] => 
+        )
+
+    [1] => Array
+        (
+            [id] => 36
+            [merk] => -
+            [namabar] => KLEP SUMUR BEST 1/2 #HSG6
+            [tipe_bar] => 
+            [kategori] => SANITARY
+            [harga_beli] => 9000
+            [harga_beli_bayangan] => 
+            [harga_jual] => 15000
+            [jum_stok] => 0.0
+            [satuan] => PCS
+            [lmt_min] => 12
+            [ket] => 
+            [st_per_harga] => 0
+            [harga_beli_sebelum] => 10000
+            [jns_kepemilikan] => 1
+            [hrgjualbawah] => 10000
+            [hrgjualatas] => 22500
+            [id_sup] => 14
+            [nama_sup] => NAGA MAS
+            [f3] => 
+            [f4] => 
+        )
+
+    [2] => Array
+        (
+            [id] => 105
+            [merk] => -
+            [namabar] => SAMBUNGAN SELANG NEWSTAR #HSG6
+            [tipe_bar] => 
+            [kategori] => SANITARY
+            [harga_beli] => 1850
+            [harga_beli_bayangan] => 
+            [harga_jual] => 5000
+            [jum_stok] => 7.0
+            [satuan] => PCS
+            [lmt_min] => 12
+            [ket] => 
+            [st_per_harga] => 0
+            [harga_beli_sebelum] => 1850
+            [jns_kepemilikan] => 1
+            [hrgjualbawah] => 2350
+            [hrgjualatas] => 20000
+            [id_sup] => 14
+            [nama_sup] => NAGA MAS
+            [f3] => 
+            [f4] => 
+        )
+
+    [3] => Array
+        (
+            [id] => 114
+            [merk] => -
+            [namabar] => EMBER HIJAU KECIL #HSG7
+            [tipe_bar] => 
+            [kategori] => SANITARY
+            [harga_beli] => 3950
+            [harga_beli_bayangan] => 
+            [harga_jual] => 8000
+            [jum_stok] => 61.0
+            [satuan] => PCS
+            [lmt_min] => 0
+            [ket] => 
+            [st_per_harga] => 0
+            [harga_beli_sebelum] => 3950
+            [jns_kepemilikan] => 1
+            [hrgjualbawah] => 4950
+            [hrgjualatas] => 20000
+            [id_sup] => 14
+            [nama_sup] => NAGA MAS
+            [f3] => 
+            [f4] => 
+        )
+
+    [4] => Array
+        (
+            [id] => 132
+            [merk] => -
+            [namabar] => KAWAT BENDRAT CURAH #HSG4
+            [tipe_bar] => 
+            [kategori] => KAWAT
+            [harga_beli] => 1764
+            [harga_beli_bayangan] => 
+            [harga_jual] => 2500
+            [jum_stok] => 310.0
+            [satuan] => ONS
+            [lmt_min] => 0
+            [ket] => 
+            [st_per_harga] => 0
+            [harga_beli_sebelum] => 1764
+            [jns_kepemilikan] => 1
+            [hrgjualbawah] => 1864
+            [hrgjualatas] => 5000
+            [id_sup] => 55
+            [nama_sup] => HATAMA
+            [f3] => 
+            [f4] => 
+        )
+
+    [5] => Array
+        (
+            [id] => 136
+            [merk] => -
+            [namabar] => KUNCI LACK WC BOLZANO BULAT #HSG1
+            [tipe_bar] => 
+            [kategori] => KUNCI
+            [harga_beli] => 75000
+            [harga_beli_bayangan] => 
+            [harga_jual] => 95000
+            [jum_stok] => 1.0
+            [satuan] => PCS
+            [lmt_min] => 6
+            [ket] => 
+            [st_per_harga] => 0
+            [harga_beli_sebelum] => 75000
+            [jns_kepemilikan] => 1
+            [hrgjualbawah] => 80000
+            [hrgjualatas] => 127500
+            [id_sup] => 14
+            [nama_sup] => NAGA MAS
+            [f3] => 
+            [f4] => 
+        )
+
+    [6] => Array
+        (
+            [id] => 142
+            [merk] => -
+            [namabar] => KUNCI LACK KODAI #HSG7
+            [tipe_bar] => 
+            [kategori] => KUNCI
+            [harga_beli] => 66800
+            [harga_beli_bayangan] => 
+            [harga_jual] => 85000
+            [jum_stok] => 4.0
+            [satuan] => SET
+            [lmt_min] => 6
+            [ket] => 
+            [st_per_harga] => 0
+            [harga_beli_sebelum] => 66800
+            [jns_kepemilikan] => 1
+            [hrgjualbawah] => 71800
+            [hrgjualatas] => 100000
+            [id_sup] => 14
+            [nama_sup] => NAGA MAS
+            [f3] => 
+            [f4] => 
+        )
+
+    [7] => Array
+        (
+            [id] => 144
+            [merk] => -
+            [namabar] => KUNCI LACK WANLY BESAR #HSG1
+            [tipe_bar] => 
+            [kategori] => KUNCI
+            [harga_beli] => 95500
+            [harga_beli_bayangan] => 
+            [harga_jual] => 115000
+            [jum_stok] => 58.0
+            [satuan] => SET
+            [lmt_min] => 0
+            [ket] => 
+            [st_per_harga] => 0
+            [harga_beli_sebelum] => 95500
+            [jns_kepemilikan] => 1
+            [hrgjualbawah] => 100500
+            [hrgjualatas] => 500000
+            [id_sup] => 76
+            [nama_sup] => SINAR TIMUR
+            [f3] => 
+            [f4] => 
+        )
+
+    [8] => Array
+        (
+            [id] => 145
+            [merk] => -
+            [namabar] => KUNCI LACK HOLLY #HSG7
+            [tipe_bar] => 
+            [kategori] => KUNCI
+            [harga_beli] => 68000
+            [harga_beli_bayangan] => 
+            [harga_jual] => 85000
+            [jum_stok] => 11.0
+            [satuan] => SET
+            [lmt_min] => 12
+            [ket] => 
+            [st_per_harga] => 0
+            [harga_beli_sebelum] => 95250
+            [jns_kepemilikan] => 1
+            [hrgjualbawah] => 73000
+            [hrgjualatas] => 200000
+            [id_sup] => 14
+            [nama_sup] => NAGA MAS
+            [f3] => 
+            [f4] => 
+        )
+
+    [9] => Array
+        (
+            [id] => 150
+            [merk] => -
+            [namabar] => GRENDEL BLC 2 #HSG4
+            [tipe_bar] => 
+            [kategori] => KUNCI
+            [harga_beli] => 24200
+            [harga_beli_bayangan] => 
+            [harga_jual] => 40000
+            [jum_stok] => 50.0
+            [satuan] => PSG
+            [lmt_min] => 12
+            [ket] => 
+            [st_per_harga] => 0
+            [harga_beli_sebelum] => 24200
+            [jns_kepemilikan] => 1
+            [hrgjualbawah] => 29200
+            [hrgjualatas] => 50000
+            [id_sup] => 
+            [nama_sup] => 
+            [f3] => 
+            [f4] => 
+        )
+
+)
