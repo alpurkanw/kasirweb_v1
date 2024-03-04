@@ -1,0 +1,13 @@
+to Do list
+- buat konfig file untuk mengubah settingan 
+nama toko
+alamat toko
+namaowner
+setting printer besar atau kcil
+
+- fitur DO
+open DO 
+transaksi DO
+DO ada di menu kasir untuk input DO
+laporan transaksi DO 
+laporan transaksi per DO 
