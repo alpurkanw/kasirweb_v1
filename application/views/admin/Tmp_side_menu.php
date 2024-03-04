@@ -45,6 +45,14 @@
                 <li class="nav-header">BARANG</li>
 
                 <li class="nav-item">
+                    <a href="<?= base_url("admin/Kategori") ?>" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Tambah Kategori
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="<?= base_url("admin/Barang") ?>" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
