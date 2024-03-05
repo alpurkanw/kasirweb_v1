@@ -42,16 +42,15 @@
             <!-- Main content -->
             <section class="content">
                 <!-- Default box -->
-                <div class="card col-6 card-primary">
+                <div class="card col-6 card-outline card-primary">
                     <div class="card-header p-2">
-                        <h5>Form Tambah Kategori</h5>
+                        <h6>Form Tambah Kategori</h6>
                     </div>
                     <div class="card-body p-2">
                         <form>
                             <div class="row">
                                 <div class="col">
                                     <div class="form-group">
-                                        <label for="nama_barang">Nama Kategori</label>
                                         <input type="text" id="nama_kategori" class="form-control" autofocus>
                                     </div>
 
