@@ -48,14 +48,18 @@
                 <!-- Default box -->
                 <div class="card col-6 card-outline card-primary">
                     <div class="card-header p-2">
-                        <h5>Form Tambah Kategori</h5>
+                        <h6>Form Tambah Kategori</h6>
                     </div>
                     <div class="card-body p-2">
                         <form action="<?= base_url("admin/kategori/tambah"); ?>" method="POST">
                             <div class="row">
                                 <div class="col">
                                     <div class="form-group">
+<<<<<<< HEAD
                                         <input type="text" required id="ketegori" name="kategori" class="form-control" placeholder="Nama Kategori" autofocus>
+=======
+                                        <input type="text" id="nama_kategori" class="form-control" autofocus>
+>>>>>>> 8cfc72dc3a508ca0876b8a635e12de6f4f84ed5d
                                     </div>
 
                                 </div>
