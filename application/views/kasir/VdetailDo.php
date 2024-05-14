@@ -44,11 +44,150 @@
             <!-- Main content -->
             <section class="content">
 
+                <div class="row">
 
+                    <div class="col-12 dsp_8">
+
+                        <div class="card card-outline card-primary">
+                            <!-- <div class="card-header p-2">
+                                Detail DO
+                            </div> -->
+                            <!-- /.card-header -->
+                            <!-- form start -->
+                            <div class="card-body">
+
+                                <?php
+                                // Menggunakan array_reduce() untuk menjumlahkan nilai qty_minta
+                                $total_qty_minta = array_reduce($trxdos, function ($carry, $item) {
+                                    return $carry + $item->qty_minta;
+                                }, 0);
+                                ?>
+                                <div class="row mb-4">
+                                    <div class="col text-center">
+                                        <strong class="h4 font-weight-bold ">DETAIL DO</strong>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col">Tanggal Open</div>
+                                            <div class="col">: <?= $do->tglinp; ?></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">No DO</div>
+                                            <div class="col">: <?= substr("00000000" . $do->id, -6); ?></div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">Customer</div>
+                                            <div class="col">: <?= $do->idcust . " - " . $do->namacust; ?></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">Alamat/Telp</div>
+                                            <div class="col">: <?= $do->alamat . " <br>" . $do->notelp; ?></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col">Barang</div>
+                                            <div class="col">: <?= $do->idbar . " - " . $do->namabar; ?></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">Jumlah Qty Pembukaan</div>
+                                            <div class="col">: <?= $do->qty . " " . "BTG" . $do->satuan; ?> @Rp <?= number_format($do->harga_jual); ?></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">Total Harga Pembukaan</div>
+                                            <div class="col">: Rp <?= number_format($do->qty * $do->harga_jual); ?> </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">Jumlah QTY Perubahan</div>
+                                            <div class="col">: <?= $total_qty_minta; ?></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">Saldo Qty</div>
+                                            <div class="col">: <?= ($do->qty - $total_qty_minta); ?></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">Total Harga Sekarang</div>
+                                            <div class="col">: Rp <?= number_format($do->qty * $do->harga_jual); ?> </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">Status DO </div>
+                                            <div class="col">:
+                                                <?php
+
+
+
+                                                echo (($do->qty - $total_qty_minta) == 0) ? "TUTUP" : "OPEN"; ?>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+                                <strong>DETAIL TRANSAKSI DO</strong>
+                                <hr>
+
+
+                                <table class="table table-sm ">
+                                    <thead>
+                                        <tr>
+                                            <th>ID DO</th>
+                                            <th>Tanggal Transaksi</th>
+                                            <th>User Transaksi</th>
+                                            <th>Qty Ambil </th>
+                                            <th>Keterangan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $no = 1;
+                                        $total_tarik = 0;
+                                        foreach ($trxdos as $key => $arr_do) {
+                                            $total_tarik += $arr_do->qty_minta;
+                                        ?>
+                                            <tr>
+                                                <td><?= $arr_do->iddo; ?></td>
+                                                <td><?= $arr_do->tglinp; ?></td>
+                                                <td><?= $arr_do->userinput; ?></td>
+                                                <td><?= $arr_do->qty_minta; ?></td>
+                                            </tr>
+
+                                        <?php
+                                            $no++;
+                                        }; ?>
+
+
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="3" class="text-right">TOTAL</td>
+                                            <td colspan="2" class=""><?= $total_tarik; ?></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+
+
+                                <hr>
+                                <?= $do->harga_jual; ?>
+                                <!-- <button type="submit" class="btn btn-primary btn_sbmt_barang">Submit</button> -->
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
 
                 <div class="row">
 
-                    <div class="col-6 dsp_8">
+                    <div class="col-12 dsp_8">
 
                         <div class="card card-outline card-primary">
                             <div class="card-header p-2">
@@ -60,26 +199,21 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">NAMA BARANG</label>
-                                        <input type="hidden" value="<?= $do->id; ?>" name="id" class="form-control idbar" readonly>
-                                        <input type="text" value="<?= $do->namabar; ?>" name="namabar" class="form-control namabar" readonly>
+                                        <input type="hidden" value="<?= $arr_do->id; ?>" name="id" class="form-control idbar" readonly>
+                                        <input type="text" value="<?= $arr_do->namabar; ?>" name="namabar" class="form-control namabar" readonly>
                                     </div>
                                     <div class="row">
                                         <div class="col">
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">QTY AWAL</label>
-                                                <input type="text" value="<?= $do->qty; ?>" name="qty_awal" class="form-control qty_awal" readonly>
+                                                <input type="text" value="<?= $arr_do->qty; ?>" name="qty_awal" class="form-control qty_awal" readonly>
                                             </div>
                                         </div>
-                                        <div class="col">
-                                            <div class="form-group">
-                                                <label for="exampleInputPassword1">QTY DIAMBIL</label>
-                                                <input type="text" value="<?= ($do->qty_taken == '') ? 0 : $do->qty_taken; ?>" name="qty_sudahambil" class="form-control qty_sudahambil" readonly>
-                                            </div>
-                                        </div>
+
                                         <div class="col">
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">QTY SISAH</label>
-                                                <input type="text" value="<?= ($do->qty - $do->qty_taken); ?>" name="qty_sisah" class="form-control qty_sisah" readonly>
+                                                <input type="text" value="<?= ($arr_do->qty); ?>" name="qty_sisah" class="form-control qty_sisah" readonly>
                                             </div>
                                         </div>
                                     </div>
@@ -108,7 +242,14 @@
 
 
                     </div>
-                    <div class="col-6 dsp_4">
+
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-12  dsp_4">
                         <?= $this->session->flashdata('pesan'); ?>
 
                         <div class="card card-outline card-primary">
@@ -164,7 +305,6 @@
                     </div>
 
                 </div>
-
 
 
 

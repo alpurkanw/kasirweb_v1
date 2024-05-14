@@ -74,11 +74,11 @@
                                         $total_hrg_taken = 0;
                                         $total_hrg_sisah = 0;
                                         foreach ($dos as $key => $asl) {
-                                            $qty_taken = ($asl->qty_taken == "") ? "0" : $asl->qty_taken;
-                                            $qty_sisah = ($asl->qty - $asl->qty_taken);
+                                            $qty_ambil = ($asl->qty_ambil == "") ? "0" : $asl->qty_ambil;
+                                            $qty_sisah = ($asl->qty - $asl->qty_ambil);
 
                                             $harga_awal = $asl->qty * $asl->harga_jual;
-                                            $harga_taken = $qty_taken * $asl->harga_jual;
+                                            $harga_taken = $qty_ambil * $asl->harga_jual;
                                             $harga_sisah = $qty_sisah * $asl->harga_jual;
 
                                             $total_hrg_awal += $harga_awal;
@@ -93,7 +93,7 @@
                                                 <td><?= $asl->tglinp; ?></td>
                                                 <td><?= $asl->namacust . " / " . $asl->notelp . " / " . $asl->alamat; ?><br>
                                                     <?= $asl->namabar . " / @Rp " . number_format($asl->harga_jual); ?></td>
-                                                <td><?= $asl->qty . " / " . $qty_taken . " /  " . $qty_sisah; ?></td>
+                                                <td><?= $asl->qty . " / " . $qty_ambil . " /  " . $qty_sisah; ?></td>
                                                 <td><?= number_format($harga_awal) . " / " . number_format($harga_taken) . " / " . number_format($harga_sisah); ?></td>
                                                 <td>
                                                     <a href="<?= base_url("kasir/Cdo/detailDo/") . $asl->id; ?>" class="btn btn-sm btn-primary">Detail DO</a>

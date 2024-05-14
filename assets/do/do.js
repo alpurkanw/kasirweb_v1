@@ -10,7 +10,7 @@ var list_item_kosong = [];
 $(".item_bar").on("click", function () {
 	$("#mdl_pickupBar .idbar").val($(this).data("id"));
 	$("#mdl_pickupBar .namabar").val($(this).data("namabar"));
-	$("#mdl_pickupBar .harga_jual").val($(this).data("harga_jual"));
+	$("#mdl_pickupBar .harga_jual").val(formatAngka($(this).data("harga_jual")));
 	$("#mdl_pickupBar .harga_beli").val($(this).data("harga_beli"));
 	$("#mdl_pickupBar").modal("toggle");
 });

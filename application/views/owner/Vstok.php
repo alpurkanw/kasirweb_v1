@@ -240,6 +240,8 @@
                                             </thead>
                                             <tbody>
                                                 <?php
+
+
                                                 $no = 1;
                                                 $g_tot = 0;
                                                 $subtotal = 0;

@@ -36,23 +36,26 @@
 
         <?php $this->load->view("admin/Tmp_side_menu"); ?>
 
+
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper pt-2">
+
+
+
 
             <!-- Main content -->
             <section class="content">
                 <!-- Default box -->
-                <div class="card col-6 card-primary">
+                <div class="card col-6 card-outline card-primary">
                     <div class="card-header p-2">
                         <h5>Form Tambah Kategori</h5>
                     </div>
                     <div class="card-body p-2">
-                        <form>
+                        <form action="<?= base_url("admin/kategori/tambah"); ?>" method="POST">
                             <div class="row">
                                 <div class="col">
                                     <div class="form-group">
-                                        <label for="nama_barang">Nama Kategori</label>
-                                        <input type="text" id="nama_kategori" class="form-control" autofocus>
+                                        <input type="text" required id="ketegori" name="kategori" class="form-control" placeholder="Nama Kategori" autofocus>
                                     </div>
 
                                 </div>
@@ -60,8 +63,8 @@
                             </div>
                             <div class="row">
                                 <div class="col text-right">
-                                    <button type="submit" class="btn  btn-primary">Tambahkan</button>
-                                    <button type="button" class="btn btn-secondary">Batalkan</button>
+                                    <button type="submit" class="btn btn-outline-primary">Tambahkan</button>
+                                    <button type="button" class="btn btn-outline-secondary">Batalkan</button>
                                 </div>
                             </div>
                         </form>
@@ -71,33 +74,48 @@
                     <!-- /.card-body -->
 
                 </div>
-                <div class="card col-6 card-primary">
 
-                    <div class="card-body p-2">
-                        <table class="table table-sm table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Kategori</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>id</td>
-                                    <td>$kategori</td>
-                                </tr>
-                            </tbody>
 
-                        </table>
-                        <div class="table table-sm table-bordered"></div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card card-outline card-primary">
+                            <div class="card-body">
+                                <table id="list_kateg" class="table table-sm table-bordered   ">
+                                    <thead class="bg-primary">
+                                        <tr role="row" class="">
+                                            <th>Id</th>
+                                            <th>KATEGORI</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $no = 1;
+                                        foreach ($ktgs as $key => $ktg) {
 
+                                        ?>
+                                            <tr role="row" class="item_ktg" data-id="<?= $ktg->id; ?>" data-kategori="<?= $ktg->kategori; ?>">
+                                                <td><?= $no; ?></td>
+                                                <td>
+                                                    <?= $ktg->kategori; ?>
+                                                    <form action="<?= base_url("admin/Kategori/delete"); ?>" method="post">
+                                                        <input type="hidden" name="id" value="<?= $ktg->id; ?>">
+                                                        <button type="submit" class="btn btn-outline-primary" onclick="return confirm('Anda Yakin mau Delete kategori ini?')">Delete</button>
+                                                    </form>
+
+                                                </td>
+                                            </tr>
+                                        <?php
+                                            $no++;
+                                        }; ?>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                        </div>
                     </div>
-                    <!-- /.card-body -->
-
                 </div>
-                <!-- /.card -->
-
-
 
                 <!-- /.card -->
 
@@ -159,7 +177,7 @@
                 autoclose: true,
                 todayHighlight: true
             });
-            $('#list_lap_bar').DataTable({
+            $('#list_kateg').DataTable({
                 dom: 'Bfrtip',
                 buttons: [{
                         "extend": 'pdf',
@@ -186,10 +204,12 @@
                 ]
             });
 
-            $('.btn_submit').click(function() {
-                $('.form_submit').submit();
+            // $('.btn_submit').click(function() {
+            //     $('.form_submit').submit();
 
-            });
+            // });
+
+
         });
     </script>
 </body>

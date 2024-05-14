@@ -29,8 +29,19 @@ class Cdo extends CI_Controller
         // echo "tes";
         $data["judul"] = "Detail DO";
 
-        $data["do"] = $this->db->get_where('tm_do', ["id" => $id])->result()[0];
-        $data["trxdos"] = $this->db->get('trx_do')->result();
+        $data["do"] = $this->db->get_where('do_tm_do', ["id" => $id])->result()[0];
+
+
+        $sql = "
+                SELECT * FROM do_trx_do where id 
+        ";
+
+
+        // $data["trxs"] =  $this->db->query($sql)->result();
+
+
+
+        $data["trxdos"] = $this->db->get('do_trx_do')->result();
         $this->load->view('kasir/VdetailDo', $data);
     }
 
@@ -43,7 +54,7 @@ class Cdo extends CI_Controller
 
 
             $this->db->select_max('no_notado');
-            $query = $this->db->get('tm_do');
+            $query = $this->db->get('do_tm_do');
             $result = $query->row();
             $max_id = $result->no_notado;
             // echo ($max_id + 1);
@@ -68,13 +79,12 @@ class Cdo extends CI_Controller
                     "harga_beli" => $bar["harga_beli"],
                     "tglinp" => date("Ymd"),
                     "userinp" => $_SESSION["username"],
-                    "no_notado" => ($max_id + 1),
-                    "qty_taken" => 0
+                    "no_notado" => ($max_id + 1)
 
                 ];
 
 
-                $this->db->insert('tm_do', $data_insert);
+                $this->db->insert('do_tm_do', $data_insert);
             }
 
 
@@ -96,7 +106,7 @@ class Cdo extends CI_Controller
         $data["judul"] = "List DO";
         $data["show"] = "index";
 
-        $data["dos"] = $this->db->get('tm_do')->result();
+        $data["dos"] = $this->db->get('do_tm_do')->result();
         $this->load->view('kasir/VallDo', $data);
     }
 
@@ -112,16 +122,17 @@ class Cdo extends CI_Controller
             $data_insert = [
 
                 "iddo" => $data["id"],
+                "kodebar" => $data["namabar"],
                 "namabar" => $data["namabar"],
                 "qty_sisah_sebelum" => $data["qty_sisah"],
                 "qty_minta" => $data["jum_minta"],
                 "qty_sisah_sekarang" => ($data["qty_sisah"] - $data["jum_minta"]),
-                "harga" => $data["harga"],
+                // "harga" => $data["harga"],
                 "tglinp" => date('Ymd'),
                 "userinput" => $_SESSION["username"]
 
             ];
-            $ret = $this->db->insert('trx_do', $data_insert);
+            $ret = $this->db->insert('do_trx_do', $data_insert);
 
 
             if ($ret > 0) {
@@ -149,7 +160,7 @@ class Cdo extends CI_Controller
         // $data["judul"] = "List DO";
         // $data["show"] = "index";
 
-        // $data["dos"] = $this->db->get('tm_do')->result();
+        // $data["dos"] = $this->db->get('do_tm_do')->result();
         // $this->load->view('kasir/VallDo', $data);
     }
 }
