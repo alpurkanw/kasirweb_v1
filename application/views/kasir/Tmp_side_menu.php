@@ -27,19 +27,36 @@
                     </a>
 
                 </li>
+                <!-- <li class="nav-item">
+                    <a href="<?= base_url("kasir/Cdo") ?>" class="nav-link">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>
+                            Pembukaan DO
+                        </p>
+                    </a>
 
-                <li class="nav-item">
+                </li> -->
+
+                <!-- <li class="nav-item">
                     <a href="<?= base_url("kasir/Cdo/allDo") ?>" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                             List DO
                         </p>
                     </a>
-                </li>
+                </li> -->
 
 
                 <li class="nav-header">Laporan</li>
                 <li class="nav-item">
+                    <a href="<?= base_url("kasir/Cdo") ?>" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Lap. Pembukaan DO
+                        </p>
+                    </a>
+                </li>
+                <!-- <li class="nav-item">
                     <a href="<?= base_url("kasir/Cdo") ?>" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
@@ -55,7 +72,7 @@
                             Lap. open BO
                         </p>
                     </a>
-                </li>
+                </li> -->
 
                 <!-- 
                 <li class="nav-header">Menu Utama</li>

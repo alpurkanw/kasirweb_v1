@@ -81,7 +81,7 @@ $db['default'] = array(
 
 	'hostname' => 'localhost:3306',
 	'username' => 'root',
-	'password' => '',
+	'password' => 'root',
 	'database' => 'toko_hatama',
 
 	'dbdriver' => 'mysqli',
